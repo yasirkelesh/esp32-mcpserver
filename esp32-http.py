@@ -1,11 +1,11 @@
 # Basit test için
 import requests
 
-ESP32_IP = "192.168.183.68"
+raspi_IP = "192.168.205.68"
 
 def control_servo(angle):
     try:
-        response = requests.post(f"http://{ESP32_IP}/servo", data={"angle": angle})
+        response = requests.post(f"http://{raspi_IP}/servo", data={"angle": angle})
         print(f"✅ Servo {angle} dereceye hareket etti!")
         return response.json()
     except Exception as e:
